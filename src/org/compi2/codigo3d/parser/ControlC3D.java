@@ -8,6 +8,7 @@ public class ControlC3D {
     
     private static int temp = 0;
     private static String c3d = "";
+    private static int etq = 0;
     
     /**
      * Reinicia las variables estáticas relacionadas con la generación del
@@ -16,6 +17,7 @@ public class ControlC3D {
     public static void reiniciar(){
         temp = 0;
         c3d = "";
+        etq = 0;
     }
     
     /**
@@ -33,6 +35,14 @@ public class ControlC3D {
      */
     public static void agregarC3D(String sentencia){
         c3d += sentencia;
+    }
+    
+    /**
+     * Generamos la Siguente Etique a Utilzar
+     * @return Etiqueda Siguiente
+     */
+    public static String generaETQ(){
+        return "L$"+etq++;
     }
     
     /**
